@@ -1,4 +1,5 @@
-# DNA Convert to Complementary Strand Function
+#creating module
+
 def convertDNA(dnaOriginalStrand):
     flag = True
     while flag == True:
