@@ -1,4 +1,5 @@
 import functools
+import sys
 
 #---------------------------------------------------------------------------------------------------------------------------
 def convert_dna_decorator_5_3(func): 
@@ -21,9 +22,10 @@ def convert_dna_decorator_5_3(func):
     """
     @functools.wraps(func)
     def wrapper(*args, **kwargs):
+        
         print("\n"+"Results".center(86, "-"))
-        print("Complementary DNA Strand: " + "\n") 
         result = "3'-" + func(*args, **kwargs)[0] + "-'5"
+        print("Complementary DNA Strand: " + "\n") 
         print(result + "\n")
         print("DNA Template and DNA Complementary Strand Base-Pairing Representation: " + "\n") 
         print("DNA Temp.: "+"5'-" + func(*args, **kwargs)[1] + "-'3" + "\n" + "DNA Comp.: " + "3'-" + func(*args, *kwargs)[0] + "-'5" + "\n")
@@ -43,16 +45,18 @@ def convert_dna_5_3(dna_template_strand):
     Returns:
         complementary_dna_strand (str): The complementary strand.
     """
+    dna_characters = ['A', 'T', 'C', 'G']
+    
     flag = True
     
     while flag == True:
         
         for letter in dna_template_strand:
             
-            if letter == '5' or letter == '3' or letter =='U':
-                print("\n\n I'm sorry, please correctly type your DNA strand. DO NOT INCLUDE A U, 5'CAP, OR 3'CAP \n\n")
-                dna_template_strand = input()
-            
+            if letter not in dna_characters:
+                raise Exception("DNA Strand Error: Your string contains a 5, 3, or unrecognized characters. Please re-run your code to avoid this problem") 
+                sys.exit()
+                
         else:
             flag = False
             break
@@ -75,6 +79,7 @@ def convert_dna_5_3(dna_template_strand):
                 
         else:
             complementary_dna_strand = ''.join(c_dna_strand)
+            
 
     return complementary_dna_strand, dna_template_strand
 
@@ -97,9 +102,10 @@ def convert_dna_decorator_3_5(func):
     """
     @functools.wraps(func)
     def wrapper(*args, **kwargs):
+        
         print("\n"+"Results".center(86, "-"))
-        print("Complementary DNA Strand: " + "\n") 
         result = "5'-" + func(*args, **kwargs)[0] + "-'3"
+        print("Complementary DNA Strand: " + "\n") 
         print(result + "\n")
         print("DNA Template and DNA Complementary Strand Base-Pairing Representation: " + "\n") 
         print("DNA Temp.: " + "3'-" + func(*args, **kwargs)[1] + "-'5" + "\n" + "DNA Comp.: " + "5'-" + func(*args, *kwargs)[0] + "-'5" + "\n")
@@ -118,17 +124,21 @@ def convert_dna_3_5(dna_template_strand):
 
     Returns:
         complementary_dna_strand (str): The complementary strand.
+        
     """
+    
+    dna_characters = ['A', 'T', 'C', 'G']
+    
     flag = True
     
     while flag == True:
         
         for letter in dna_template_strand:
             
-            if letter == '5' or letter == '3' or letter =='U':
-                print("\n\n I'm sorry, please correctly type your DNA strand. DO NOT INCLUDE A U, 5'CAP, OR 3'CAP \n\n")
-                dna_template_strand = input()
-            
+            if letter not in dna_characters:
+                raise Exception("DNA Strand Error: Your string contains a 5, 3, or unrecognized characters. Please re-run your code to avoid this problem") 
+                sys.exit()
+          
         else:
             flag = False
             break
@@ -171,9 +181,10 @@ def convert_rna_decorator_5_3(func):
     """
     @functools.wraps(func)
     def wrapper(*args, **kwargs):
+        
         print("\n"+"Results".center(86, "-"))
-        print("Complementary tRNA Strand: " + "\n") 
         result = "3'-" + func(*args, **kwargs)[0] + "-'5"
+        print("Complementary tRNA Strand: " + "\n") 
         print(result + "\n")
         print("RNA and tRNA base-pairing representation: \n")
         print("RNA  Temp.: " + "5'-" + func(*args, **kwargs)[1] + "-'3" + "\n" + "tRNA Comp.: " + "3'-" + func(*args, *kwargs)[0] + "-'5" + "\n")
@@ -191,17 +202,21 @@ def convert_rna_5_3(rna_template_strand):
 
     Returns:
         complete_tRNA_strand: The resulting complementary tRNA strand.
+    
     """
+    
+    rna_characters = ['A', 'U', 'C', 'G']
+    
     flag = True
     
     while flag == True:
         
         for letter in rna_template_strand:
             
-            if letter == '5' or letter == '3' or letter == 'T':
-                print("I'm sorry, please correctly type your RNA strand, and DO NOT INCLUDE A T, 5' CAP, OR 3' CAP ends")
-                rna_template_strand = input()
-                
+            if letter not in rna_characters:
+                raise Exception("RNA Strand Error: Your string contains a 5, 3, or unrecognized characters. Please re-run your code to avoid this problem") 
+                sys.exit()
+             
         else:
             flag = False
             break
@@ -245,9 +260,10 @@ def convert_rna_decorator_3_5(func):
     """
     @functools.wraps(func)
     def wrapper(*args, **kwargs):
+        
         print("\n"+"Results".center(86, "-"))
-        print("Complementary tRNA Strand: " + "\n") 
         result = "5'-" + func(*args, **kwargs)[0] + "-'3"
+        print("Complementary tRNA Strand: " + "\n") 
         print(result + "\n")
         print("RNA and tRNA base-pairing representation: \n")
         print("RNA  Temp.: " + "3'-" + func(*args, **kwargs)[1] + "-'5" + "\n" + "tRNA Comp.: " + "5'-" + func(*args, *kwargs)[0] + "-'3" + "\n")
@@ -265,15 +281,17 @@ def convert_rna_3_5(rna_template_strand):
     Returns:
         complete_tRNA_strand: The resulting complementary tRNA strand
     """
+    rna_characters = ['A', 'U', 'C', 'G']
+    
     flag = True
     
     while flag == True:
         
         for letter in rna_template_strand:
             
-            if letter == '5' or letter == '3' or letter == 'T':
-                print("I'm sorry, please correctly type your RNA strand, and DO NOT INCLUDE A T, 5' CAP, OR 3' CAP ends")
-                rna_template_strand = input()
+            if letter not in rna_characters:
+                raise Exception("RNA Strand Error: Your string contains a 5, 3, or unrecognized characters. Please re-run your code to avoid this problem") 
+                sys.exit()
                 
         else:
             flag = False
