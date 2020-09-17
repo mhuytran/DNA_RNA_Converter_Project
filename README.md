@@ -34,10 +34,24 @@ Before reading the README.md document, **please** view these resources if you do
  sys.append("C:\path\to\file\converterFunctions.py")
            
  ```
-4. Run both the Example files, **DNA_Normal_Example.py** and **DNA_Searchbar_Example.py** to understand functionality
-5. Happy Coding! Feel Free to use the functions
+4. Run both the Example files, **DNA_Normal_Example.py** and **DNA_Searchbar_Example.py**, results should be the following:
+
+#### **DNA_Normal_Example.py** Results:
+<img src="https://github.com/mhuytran/DNA_RNA_Converter_Project/blob/mhuytran-patch-1/results_normal.png">      
+
+#### **DNA_Searchbar_Example.py** Results:
+<img src="https://github.com/mhuytran/DNA_RNA_Converter_Project/blob/mhuytran-patch-1/results_searchbar.png">     
+
+5. Happy Coding! Feel free to use the functions. 
+
+## Modules Used In This Project
+
+1. functools
+2. sys
+3. re
  
- ##
            
-  
+## Conclusion 
+
+Thank you for viewing my first published project! I really appreciate it if you follow me on GitHub. Thank you!
   
