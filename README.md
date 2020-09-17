@@ -9,6 +9,8 @@ Before reading the README.md document, **please** view these resources if you do
 
 [DNA and RNA Base Pairing Rules PDF](https://www.peekskillcsd.org/cms/lib/NY01913880/Centricity/Domain/827/DNA%20RNA%20Base%20Pairing%20Rules.pdf)
 
+[DNA and RNA Base Pairing Video](https://www.youtube.com/watch?v=QN2YFxu4swM)
+
 
 ## Purpose
 
