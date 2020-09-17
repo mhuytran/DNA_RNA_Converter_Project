@@ -1,7 +1,9 @@
 # DNA & mRNA Converter Project
+
+![Profile]
+()
  
 Before reading the README.md document, **please** view these resources if you do not remember base-pairing.
-  
  
 ## Resources 
   
