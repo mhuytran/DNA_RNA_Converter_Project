@@ -1,7 +1,6 @@
 # DNA & mRNA Converter Project
 
-![Profile]
-()
+![DNA](dna_rna.jpg)
  
 Before reading the README.md document, **please** view these resources if you do not remember base-pairing.
  
