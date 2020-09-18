@@ -1,4 +1,4 @@
-import converterFunctions as cf 
+import nucleicfunctions as nf 
 
 #--------------------------------------------------------------------------------------------------------
 
@@ -17,19 +17,16 @@ first_dna_strand_example_5_3 = 'ACTGATCATCGATCGATGCATGCTACGTAGCTAGCTAGCGATCGTCGT
 #DNA strand 3-5 directionality
 second_dna_strand_example_3_5 = 'CGCGATGCTAGCTAGCTAGCTAGCTAGCTAGCTGACTGATCGTACGTAGCTAGCTACTGACTG'
 
-#mRNA strand 5-3 directionality
-first_rna_strand_example_5_3 = 'GACCUCGUCCGGGAUGAAACGUCUCAAUGAGGAAGGUGGACAUAUGCUUA'
-
-#mRNA strand 3-5 directionality
-second_rna_strand_example_3_5 = 'CCCUACCAAUUCCUCGGGCCUUCGAGGCAAUUUCCCAGAAGCCGGGAUAU'
+#mRNA strand 
+mRNA_strand_example = 'GACCUCGUCCGGGAUGAAACGUCUCAAUGAGGAAGGUGGACAUAUGCU'
 
 
-print(cf.convert_dna_5_3(first_dna_strand_example_5_3))
+print(nf.convert_dna_5_3(first_dna_strand_example_5_3))
 
-print(cf.convert_dna_3_5(second_dna_strand_example_3_5))
+print(nf.convert_dna_3_5(second_dna_strand_example_3_5))
 
-print(cf.convert_rna_5_3(first_rna_strand_example_5_3))
+print(nf.convert_rna(mRNA_strand_example))
 
-print(cf.convert_rna_3_5(second_rna_strand_example_3_5))
+
 
 #-------END OF CODE---------------------- END OF CODE--------------------------END OF CODE-------------------------
