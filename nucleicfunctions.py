@@ -268,9 +268,9 @@ def convert_rna_decorator(func):
         print("\n"+"Results".center(86, "-"))
         result = func(*args, **kwargs)[1] 
         print("tRNA sequence: " + "\n") 
-        print(result + "\n")
+        print(result + "\n\n")
         print("mRNA and tRNA base-pairing representation: \n")
-        print("mRNA Temp.: " + "5'-" + func(*args, **kwargs)[0] + "-'3" + "\n" + "tRNA  Seq.: " + "   " + func(*args, *kwargs)[1] + "   " + "\n")
+        print("mRNA Temp.: " + "5'-" + func(*args, **kwargs)[0] + "-'3" + "\n" + "tRNA  Seq.: " + "   " + func(*args, *kwargs)[1] + "   " + "\n\n")
         print("Amino Acid Sequence Data: \n")
         print("tRNA Codon Sequence: " + func(*args, **kwargs)[2])
         print("Amino Acid Sequence: " + func(*args, **kwargs)[3] + "\n")
