@@ -24,8 +24,8 @@
 ##  Download and Setup 
   
  1. Press the 'Code' button to either clone or download as zip.
- 2. Open the files your code editor of choice, and put the nucleicfunctions.py in any directory. 
- 3. Create a python file and code the following below:
+ 2. Transfer the files into a folder that can be opened in your code editor of choice. 
+ 3. Code the following below in a new python file, and pass in **your** file path of the nucleicfunctions.py file in the sys.append function:
            
  ```python
  import sys 
