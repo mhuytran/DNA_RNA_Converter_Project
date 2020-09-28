@@ -154,7 +154,7 @@ RNA Strand:5'-UAGCUAGCUAGCAUCGAUCGAUAGUAGCAUCCCCCUUUAGCAUCGAUCGAUCGAUCGAUCGAUCGA
 Program Status: Done
 ```
 
-Inputting mRNA as Template Strand: 
+Inputting mRNA as template strand: 
 ```
 ----------------------------------------Prompt----------------------------------------
 Please enter DNA or mRNA into the search bar:
