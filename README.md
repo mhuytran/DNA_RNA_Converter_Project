@@ -45,41 +45,41 @@ Complementary DNA Strand:
 
 3'-TGACTAGTAGCTAGCTACGTACGATGCATCGATCGATCGCTAGCAGCATCGATCGATCGATCG-'5
 
-DNA Template and DNA Complementary Strand Base-Pairing Representation: 
-
-DNA Temp.: 5'-ACTGATCATCGATCGATGCATGCTACGTAGCTAGCTAGCGATCGTCGTAGCTAGCTAGCTAGC-'3      
-DNA Comp.: 3'-TGACTAGTAGCTAGCTACGTACGATGCATCGATCGATCGCTAGCAGCATCGATCGATCGATCG-'5      
-
-Program Status: Done
-
----------------------------------------Results----------------------------------------
-Complementary DNA Strand: 
-
-5'-GCGCTACGATCGATCGATCGATCGATCGATCGACTGACTAGCATGCATCGATCGATGACTGAC-'3
 
 DNA Template and DNA Complementary Strand Base-Pairing Representation:
 
-DNA Temp.: 3'-CGCGATGCTAGCTAGCTAGCTAGCTAGCTAGCTGACTGATCGTACGTAGCTAGCTACTGACTG-'5
-DNA Comp.: 5'-GCGCTACGATCGATCGATCGATCGATCGATCGACTGACTAGCATGCATCGATCGATGACTGAC-'5
+DNA Temp.: 5'-ACTGATCATCGATCGATGCATGCTACGTAGCTAGCTAGCGATCGTCGTAGCTAGCTAGCTAGC-'3
+DNA Comp.: 3'-TGACTAGTAGCTAGCTACGTACGATGCATCGATCGATCGCTAGCAGCATCGATCGATCGATCG-'5
+
+
+RNA Strand Synthesis Result:
+
+RNA Strand:5'-ACUGAUCAUCGAUCGAUGCAUGCUACGUAGCUAGCUAGCGAUCGUCGUAGCUAGCUAGCUAGC-'3
 
 Program Status: Done
+
+
+Enter a mRNA strand: ACUGAUCAUCGAUCGAUGCAUGCUACGUAGCUAGCUAGCGAUCGUCGUAGCUAGCUAGCUAGC
 
 ---------------------------------------Results----------------------------------------
-tRNA sequence:
+tRNA sequence: 
 
-CUGGAGCAGGCCCUACUUUGCAGAGUUACUCCUUCCACCUGUAUACGA
+UGACUAGUAGCUAGCUACGUACGAUGCAUCGAUCGAUCGCUAGCAGCAUCGAUCGAUCGAUCG
 
-mRNA and tRNA base-pairing representation:
 
-mRNA Temp.: 5'-GACCUCGUCCGGGAUGAAACGUCUCAAUGAGGAAGGUGGACAUAUGCU-'3
-tRNA  Seq.:    CUGGAGCAGGCCCUACUUUGCAGAGUUACUCCUUCCACCUGUAUACGA
+mRNA and tRNA base-pairing representation: 
 
-Amino Acid Sequence Data:
+mRNA Temp.: 5'-ACUGAUCAUCGAUCGAUGCAUGCUACGUAGCUAGCUAGCGAUCGUCGUAGCUAGCUAGCUAGC-'3
+tRNA  Seq.:    UGACUAGUAGCUAGCUACGUACGAUGCAUCGAUCGAUCGCUAGCAGCAUCGAUCGAUCGAUCG   
 
-tRNA Codon Sequence: CUG-GAG-CAG-GCC-CUA-CUU-UGC-AGA-GUU-ACU-CCU-UCC-ACC-UGU-AUA-CGA
-Amino Acid Sequence: Leu-Glx-Gln-Ala-Leu-Leu-Cys-Arg-Val-Thr-Pro-Ser-Thr-Cys-Ile-Arg
+
+Amino Acid Sequence Data: 
+
+tRNA Codon Sequence: UGA-CUA-GUA-GCU-AGC-UAC-GUA-CGA-UGC-AUC-GAU-CGA-UCG-CUA-GCA-GCA-UCG-AUC-GAU-CGA-UCG 
+Amino Acid Sequence: TERM-Leu-Val-Ala-Ser-Tyr-Val-Arg-Cys-Ile-Asx-Arg-Ser-Leu-Ala-Ala-Ser-Ile-Asx-Arg-Ser
 
 Program Status: Done
+
 
 ```
 
@@ -92,25 +92,31 @@ Please enter DNA or mRNA into the search bar:
 
 DNA
 
-Please enter 5-3 or 3-5 for the directionality of your DNA template strand. If mRNA strand, enter 5-3. 
+Please enter 5-3 or 3-5 for the directionality of your DNA template strand. If mRNA strand, enter 5-3.
 
 5-3
 
 Confirmation: dna, 5-3
 
-Now, please type in your 'DNA' template strand: 
+Now, please type in your 'DNA' template strand:
 
 ATGCATCGTAGCTACTAGCTAGCTGATCGATGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTACGTG
 
 ---------------------------------------Results----------------------------------------
-Complementary DNA Strand: 
+Complementary DNA Strand:
 
 3'-TACGTAGCATCGATGATCGATCGACTAGCTACGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATGCAC-'5
 
-DNA Template and DNA Complementary Strand Base-Pairing Representation: 
+
+DNA Template and DNA Complementary Strand Base-Pairing Representation:
 
 DNA Temp.: 5'-ATGCATCGTAGCTACTAGCTAGCTGATCGATGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTACGTG-'3
 DNA Comp.: 3'-TACGTAGCATCGATGATCGATCGACTAGCTACGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATGCAC-'5
+
+
+RNA Strand Synthesis Result:
+
+RNA Strand:5'-AUGCAUCGUAGCUACUAGCUAGCUGAUCGAUGCUAGCUAGCUAGCUAGCUAGCUAGCUAGCUAGCUAGCUAGCUAGCUAGCUAGCUAGCUACGUG-'3
 
 Program Status: Done
 ```
@@ -141,18 +147,23 @@ DNA Template and DNA Complementary Strand Base-Pairing Representation:
 DNA Temp.: 3'-ATCGATCGATCGTAGCTAGCTATCATCGTAGGGGGAAATCGTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTGATCG-'5
 DNA Comp.: 5'-TAGCTAGCTAGCATCGATCGATAGTAGCATCCCCCTTTAGCATCGATCGATCGATCGATCGATCGATCGATCGACTAGC-'5
 
+RNA Strand Synthesis Result: 
+
+RNA Strand:5'-UAGCUAGCUAGCAUCGAUCGAUAGUAGCAUCCCCCUUUAGCAUCGAUCGAUCGAUCGAUCGAUCGAUCGAUCGACUAGC-'3
+
 Program Status: Done
 ```
-Inputting mRNA as template strand:
+
+Inputting mRNA as Template Strand: 
 ```
 ----------------------------------------Prompt----------------------------------------
 Please enter DNA or mRNA into the search bar:
 
-mrna
+mRNA
 
 Please enter 5-3 or 3-5 for the directionality of your DNA template strand. If mRNA strand, enter 5-3. 
 
-5-3
+5-3 
 
 Confirmation: mrna, 5-3
 
@@ -165,15 +176,19 @@ tRNA sequence:
 
 CUGGAGCAGGCCCUACUUUGCAGAGUUACUCCUUCCACCUGUAUACGA
 
-mRNA and tRNA base-pairing representation:
+
+mRNA and tRNA base-pairing representation: 
 
 mRNA Temp.: 5'-GACCUCGUCCGGGAUGAAACGUCUCAAUGAGGAAGGUGGACAUAUGCU-'3
-tRNA  Seq.:    CUGGAGCAGGCCCUACUUUGCAGAGUUACUCCUUCCACCUGUAUACGA
+tRNA  Seq.:    CUGGAGCAGGCCCUACUUUGCAGAGUUACUCCUUCCACCUGUAUACGA   
 
-Amino Acid Sequence Data:
 
-tRNA Codon Sequence: CUG-GAG-CAG-GCC-CUA-CUU-UGC-AGA-GUU-ACU-CCU-UCC-ACC-UGU-AUA-CGA
-Amino Acid Sequence: Leu-Glx-Gln-Ala-Leu-Leu-Cys-Arg-Val-Thr-Pro-Ser-Thr-Cys-Ile-Arg
+Amino Acid Sequence Data: 
+
+tRNA Codon Sequence: CUG-GAG-CAG-GCC-CUA-CUU-UGC-AGA-GUU-ACU-CCU-UCC-ACC-UGU-AUA-CGA  
+Amino Acid Sequence: Leu-Glx-Gln-Ala-Leu-Leu-Cys-Arg-Val-Thr-Pro-Ser-Thr-Cys-Ile-Arg  
+
+Program Status: Done
 ```
 
 ## Modules Used In This Project
@@ -181,9 +196,11 @@ Amino Acid Sequence: Leu-Glx-Gln-Ala-Leu-Leu-Cys-Arg-Val-Thr-Pro-Ser-Thr-Cys-Ile
 1. [functools](https://docs.python.org/3/library/functools.html?highlight=functools#module-functools)
 2. [sys](https://docs.python.org/3/library/sys.html)
 3. [re](https://docs.python.org/3/library/re.html?highlight=re#module-re)
+4. [pyperclip](https://pypi.org/project/pyperclip/)
  
-           
+
 ## Conclusion & Final Thoughts
 
 Though this project has been finished, I will eventually model the central dogma in the nucleic functions script, which is not included in this project at the moment. I hope that you, the reader, have been satisfied with my project. Thank you!
   
+
