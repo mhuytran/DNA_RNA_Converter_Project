@@ -15,8 +15,8 @@ dna_strand = 'ACTGATCATCGATCGATGCATGCTACGTAGCTAGCTAGCGATCGTCGTAGCTAGCTAGCTAGC'
 
 print(nf.convert_dna_5_3(dna_strand))
 
-x = input('\n\nEnter a mRNA strand: ')
+mRNA_strand = input('\n\nEnter a mRNA strand: ')
 
-print(nf.convert_rna(x))
+print(nf.convert_rna(mRNA_strand))
 
 #-------END OF CODE-----------------------END OF CODE--------------------------END OF CODE-------------------------
