@@ -14,7 +14,7 @@
 
 ## Purpose & Introduction
 
-  Parsing through a DNA template strand or mRNA strand can be exhausting; however, a python program can alleviate this task. This project is designed for individuals that want to obtain a DNA complementary strand or a tRNA sequence instantly with python. Additionally, if the inputted template strand is mRNA, then the tRNA sequence and its amino acid sequence are outputted. 
+  Parsing through a DNA template strand or mRNA strand can be exhausting; however, a python program can alleviate this task. This project is designed for individuals that want to obtain a DNA complementary strand, mRNA strand, or a tRNA sequence instantly with python. Additionally, if the inputted template strand is mRNA, then the tRNA sequence and its amino acid sequence are outputted. 
   
   While the functionality of this project can be found in efficient modules, such as BioPython, all of the project files are written originally and completely by the author (mhuytran). The functions that are utilized in this project are in the **nucleicfunctions.py** file, and these functions initiate the parsing of DNA and mRNA strands. To see the outputs of these functions, I have also included the **Normal_Example.py** and **Searchbar_Example.py** files in the repository to help you, the reader, better visualize how these functions work. 
   
