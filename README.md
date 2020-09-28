@@ -37,7 +37,7 @@
  ```
 4. Run both the Example files, **Normal_Example.py** and **Searchbar_Example.py**.:
 
-5. Happy Coding! Feel free to use the functions in the nucleicfunctions script, and view the results below to make sure you did everything correctly :). 
+5. Happy Coding! Feel free to use the functions (not the decorators) in the nucleicfunctions script, and view the results below to make sure you did everything correctly :). 
 
 ## **Normal_Example.py** Results:
 ```
