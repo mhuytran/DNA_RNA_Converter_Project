@@ -19,4 +19,4 @@ x = input('\n\nEnter a mRNA strand: ')
 
 print(nf.convert_rna(x))
 
-#-------END OF CODE---------------------- END OF CODE--------------------------END OF CODE-------------------------
+#-------END OF CODE-----------------------END OF CODE--------------------------END OF CODE-------------------------
