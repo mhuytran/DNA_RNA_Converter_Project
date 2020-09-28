@@ -34,7 +34,7 @@ def convert_dna_decorator_5_3(func):
         print("DNA Temp.: "+"5'-" + func(*args, **kwargs)[1] + "-'3" + "\n" + "DNA Comp.: " + "3'-" + func(*args, *kwargs)[0] + "-'5" + "\n\n")
         print("mRNA Strand Synthesis Result: " + "\n")
         print("mRNA Strand:"+"5'-" + func(*args, **kwargs)[2] + "-'3" + "\n")
-        copy_rna_to_clipboard = pyperclip.copy(func(*args, **kwargs)[2])
+        copy_rna_to_clipboard = pyperclip.copy("'" + func(*args, **kwargs)[2] + "'")
         
         return "Program Status: Done"
 
@@ -157,7 +157,7 @@ def convert_dna_decorator_3_5(func):
         print("DNA Temp.: " + "3'-" + func(*args, **kwargs)[1] + "-'5" + "\n" + "DNA Comp.: " + "5'-" + func(*args, *kwargs)[0] + "-'5" + "\n")
         print("mRNA Strand Synthesis Result: " + "\n")
         print("mRNA Strand:"+"5'-" + func(*args, **kwargs)[2] + "-'3" + "\n")
-        copy_rna_to_clipboard = pyperclip.copy(func(*args, **kwargs)[2])
+        copy_rna_to_clipboard = pyperclip.copy("'" + func(*args, **kwargs)[2] + "'")
         return "Program Status: Done"
 
     return wrapper
