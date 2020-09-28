@@ -9,7 +9,7 @@ import nucleicfunctions as nf
 
 #--------------------------------------------------------------------------------------------------------
 
-#Assuming that you know the directionality, the DNA strand example will have a 5-3 directionality
+#Assuming that the directionality is known, this DNA strand example will have a 5-3 directionality
 
 dna_strand = 'ACTGATCATCGATCGATGCATGCTACGTAGCTAGCTAGCGATCGTCGTAGCTAGCTAGCTAGC'
 
