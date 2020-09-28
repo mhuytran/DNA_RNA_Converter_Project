@@ -9,9 +9,9 @@ import pyperclip
 def convert_dna_decorator_5_3(func): 
     
     """
-       This convert_dna_decorator_5_3 decorator print out the results of the convert_dna_5_3 function: 
+       This convert_dna_decorator_5_3 decorator prints out the results of the convert_dna_5_3 function: 
        the complementary DNA strand, the base-pairing representation, and the mRNA strand that is synthesized from 
-       the complementary DNA strand. In addition, the mRNA strand is copied to your clipboard so you can utilize the 
+       the complementary DNA strand. In addition, the mRNA strand is copied to the clipboard if the user wants utilize the 
        convert_rna function.
         
     Args:
@@ -131,9 +131,9 @@ def convert_dna_5_3(dna_template_strand):
 def convert_dna_decorator_3_5(func): 
     
     """
-       This convert_dna_decorator_5_3 decorator print out the results: the complementary DNA strand, the
+       This convert_dna_decorator_5_3 decorator prints out the results: the complementary DNA strand, the
        base-pairing representation, and the mRNA strand that is synthesized from the template strand.
-       In addition, the mRNA strand is copied to your clipboard so you can utilize the convert_rna function.
+       In addition, the mRNA strand is copied to the clipboard if the user wants to utilize the convert_rna function.
        
     Args:
         func ([str]): The return value of convert_dna_3_5: a tuple consisting of the complementary_dna_strand
