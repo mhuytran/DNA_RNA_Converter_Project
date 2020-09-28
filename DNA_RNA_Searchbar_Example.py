@@ -1,12 +1,8 @@
 import nucleicfunctions as nf
 
-# This is a searchbar program that utilizes the functions from the converterFunctions script. 
-# First, the user inputs the type of nucleic acid desired for template strand conversion. Second, the user
-# will type the directionality of the nucleic acid. Lastly, the program will call the function, and print out the 
-# results: the complementary strand of the specified nucleic acid, the base-pairing representation, and the amino-acid
-# sequence if the specified nucliec acid was RNA.
+# This is a searchbar program that showcases what each function outputs.
 
-#------------------------------------------------------------------------------------------------------------------
+#----------------------------------------------------------------------------------------------------------------
 print("\n"+"Prompt".center(86, "-"))
 print("Please enter DNA or mRNA into the search bar:\n")
 
@@ -38,6 +34,6 @@ elif (check_strand == "5-3" and strand == 'mrna'):
     print(nf.convert_rna(mRNA_template_strand))
   
 else:
-    raise Exception("Please re-run code, you did not enter the correct syntax of either the nucleic acid or directionality")
+    raise Exception("Please re-run code, you either not enter the correct syntax or input the nucleic acid and directionality")
 
 #-------END OF CODE---------------------- END OF CODE--------------------------END OF CODE-------------------------
