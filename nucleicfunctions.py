@@ -3,36 +3,38 @@
 import functools
 import sys
 import re
+import pyperclip
 
 #---------------------------------------------------------------------------------------------------------------------------
 def convert_dna_decorator_5_3(func): 
     
     """
-       This convert_dna_decorator_5_3 takes the two parameters from
-       the original function, the DNA template strand with a 5 to 3 directionality
-       and the DNA complementary strand with a 3 to 5 directionality.
-       Consequently, the decorator implements its functionality to the original function, convert_dna_5_3,to 
-       print out the results: the complementary DNA strand and the base-pairing representation.
+       This convert_dna_decorator_5_3 decorator print out the results of the convert_dna_5_3 function: 
+       the complementary DNA strand, the base-pairing representation, and the mRNA strand that is synthesized from 
+       the complementary DNA strand. In addition, the mRNA strand is copied to your clipboard so you can utilize the 
+       convert_rna function.
         
-       
     Args:
-    
-        func([str]): The return value of convert_dna_5_3: a tuple consisting of the complementary_dna_strand
-        and the dna_template_strand.
+        func([str]): The return value of convert_dna_5_3: a tuple consisting of the complementary_dna_strand,
+        the dna_template_strand, and the mRNA_strand. 
         
     Returns:
-        
         str: "Program Status: Done"; to specify that the results have finished printing. 
     """
+    
     @functools.wraps(func)
     def wrapper(*args, **kwargs):
         
         print("\n"+"Results".center(86, "-"))
         result = "3'-" + func(*args, **kwargs)[0] + "-'5"
         print("Complementary DNA Strand: " + "\n") 
-        print(result + "\n")
+        print(result + "\n\n")
         print("DNA Template and DNA Complementary Strand Base-Pairing Representation: " + "\n") 
-        print("DNA Temp.: "+"5'-" + func(*args, **kwargs)[1] + "-'3" + "\n" + "DNA Comp.: " + "3'-" + func(*args, *kwargs)[0] + "-'5" + "\n")
+        print("DNA Temp.: "+"5'-" + func(*args, **kwargs)[1] + "-'3" + "\n" + "DNA Comp.: " + "3'-" + func(*args, *kwargs)[0] + "-'5" + "\n\n")
+        print("RNA Strand Synthesis Result: " + "\n")
+        print("RNA Strand:"+"5'-" + func(*args, **kwargs)[2] + "-'3" + "\n")
+        copy_rna_to_clipboard = pyperclip.copy(func(*args, **kwargs)[2])
+        
         return "Program Status: Done"
 
     return wrapper
@@ -41,14 +43,17 @@ def convert_dna_decorator_5_3(func):
 def convert_dna_5_3(dna_template_strand):
     
     """
-       The convert_dna function takes in a input DNA strand that has a 5 to 3 directionality,
-       and returns a complementary DNA strand that has a 3 to 5 directionality. 
+       The convert_dna_5_3 function takes in a input DNA strand that has a 5 to 3 directionality,
+       and returns a complementary DNA strand that has a 3 to 5 directionality. Function also
+       returns an mRNA strand that is synthesized from the complementary strand. 
        
     Args:
         dna_template_strand (str): The template strand.
-
+        
     Returns:
         complementary_dna_strand (str): The complementary strand.
+        mRNA_strand (str): The mRNA strand synthesized from the complementary strand. 
+        
     """
     
     dna_characters = ['A', 'T', 'C', 'G']
@@ -75,38 +80,69 @@ def convert_dna_5_3(dna_template_strand):
         for base in dna_template_strand:
             
             if base == 'A':
+                
                 c_dna_strand.append('T')
+                
             elif base == 'T':
+                
                 c_dna_strand.append('A')
+                
             elif base == 'C':
+                
                 c_dna_strand.append('G')
+                
             elif base == 'G':
+                
                 c_dna_strand.append('C')
                 
         else:
             complementary_dna_strand = ''.join(c_dna_strand)
             
+    
+    mRNA_strand_list = []  
+    
+    for base in complementary_dna_strand:
+            
+        if base == 'A':
+            
+            mRNA_strand_list.append('U')
+            
+        elif base == 'T':
+            
+            mRNA_strand_list.append('A')
+            
+        elif base == 'C':
+            
+            mRNA_strand_list.append('G')
+            
+        elif base == 'G':
+            
+            mRNA_strand_list.append('C')
+                
+    else:
+        
+        mRNA_strand = ''.join(mRNA_strand_list)
+                     
 
-    return complementary_dna_strand, dna_template_strand
+    return complementary_dna_strand, dna_template_strand, mRNA_strand
+
 
 # ---------------------------------------------------------------------------------------------------------------------------
-
 def convert_dna_decorator_3_5(func): 
     
     """
-       This convert_dna_decorator_3_5 takes the two parameters from
-       the original function, the DNA template strand with a 3 to 5 directionality
-       and the DNA complementary strand with a 5 to 3 directionality.
-       Consequently, the decorator implements its functionality to the original function, convert_dna_5_3,
-       to print out the results: the complementary DNA strand and the base-pairing representation.
-
+       This convert_dna_decorator_5_3 decorator print out the results: the complementary DNA strand, the
+       base-pairing representation, and the mRNA strand that is synthesized from the template strand.
+       In addition, the mRNA strand is copied to your clipboard so you can utilize the convert_rna function.
+       
     Args:
         func ([str]): The return value of convert_dna_3_5: a tuple consisting of the complementary_dna_strand
-        and the dna_template_strand.
-
+        the dna_template_strand, mRNA_strand.
+        
     Returns:
           str: "Program Status: Done"; to specify that the results have finished printing.
     """
+    
     @functools.wraps(func)
     def wrapper(*args, **kwargs):
         
@@ -116,6 +152,9 @@ def convert_dna_decorator_3_5(func):
         print(result + "\n")
         print("DNA Template and DNA Complementary Strand Base-Pairing Representation: " + "\n") 
         print("DNA Temp.: " + "3'-" + func(*args, **kwargs)[1] + "-'5" + "\n" + "DNA Comp.: " + "5'-" + func(*args, *kwargs)[0] + "-'5" + "\n")
+        print("RNA Strand Synthesis Result: " + "\n")
+        print("RNA Strand:"+"5'-" + func(*args, **kwargs)[2] + "-'3" + "\n")
+        copy_rna_to_clipboard = pyperclip.copy(func(*args, **kwargs)[2])
         return "Program Status: Done"
 
     return wrapper
@@ -123,14 +162,17 @@ def convert_dna_decorator_3_5(func):
 @convert_dna_decorator_3_5
 def convert_dna_3_5(dna_template_strand):
     
-    """The convert_dna_3_5 function takes in a input DNA strand that has a 3 to 5 directionality,
-       and returns a complementary DNA strand that has a 5 to 3 directionality. 
-
+    """
+       The convert_dna_3_5 function takes in a input DNA strand that has a 3 to 5 directionality,
+       and returns a complementary DNA strand that has a 5 to 3 directionality. Function also returns a RNA strand 
+       that is synthesized from the template strand.
+       
     Args:
         dna_template_strand (str): The template strand.
-
+        
     Returns:
         complementary_dna_strand (str): The complementary strand.
+        mRNA_strand (str): The mRNA strand synthesized from the 3-5 DNA strand. 
         
     """
     
@@ -158,34 +200,64 @@ def convert_dna_3_5(dna_template_strand):
         for base in dna_template_strand:
             
             if base == 'A':
+                
                 c_dna_strand.append('T')
+                
             elif base == 'T':
+                
                 c_dna_strand.append('A')
+                
             elif base == 'C':
+                
                 c_dna_strand.append('G')
+                
             elif base == 'G':
+                
                 c_dna_strand.append('C')
                 
         else:
             complementary_dna_strand = ''.join(c_dna_strand)
+            
 
-    return complementary_dna_strand, dna_template_strand
+    mRNA_strand_list = []
+    
+    for base in dna_template_strand: 
+        
+        if base == 'A':
+                
+            mRNA_strand_list.append('U')
+                
+        elif base == 'T':
+            
+            mRNA_strand_list.append('A')
+                
+        elif base == 'C':
+            
+            mRNA_strand_list.append('G')
+                
+        elif base == 'G':
+            
+            mRNA_strand_list.append('C')
+            
+    else: 
+        
+        mRNA_strand = "".join(mRNA_strand_list)
+
+    return complementary_dna_strand, dna_template_strand, mRNA_strand
+
 
 #----------------------------------------------------------------------------------------------------------------------------
 
 def convert_rna_decorator(func): 
     
     """
-       This convert_rna_decorator function takes four parameters returned from the
-       the original function; the mRNA template strand, the complete tRNA sequence, the modified complete tRNA sequence (to display with hyphens), 
-       and the amino acid sequence. Consequently, the decorator implements its functionality to the original function,convert_rna,
-       to print out the results: the complementary tRNA strand, the base-pairing representation, and the
-       amino acid sequence data.
-
+       This convert_rna_decorator function print out the results: the complementary tRNA strand, the base-pairing representation, 
+       and the amino acid sequence data.
+       
     Args:
         func ([str]): The return value of convert_rna: a tuple consisting of the the mRNA template strand, the complete tRNA sequence, 
         the modified complete tRNA sequence (to display with hyphens), and the amino acid sequence. 
-
+        
     Returns:
         str: "Program Status: Done"; to specify that the results have finished printing.
     """
@@ -211,7 +283,7 @@ def convert_rna_decorator(func):
 def convert_rna(mRNA_template_strand):
     
     """
-       The convert_rna_5_3 function takes in a input RNA strand that has a 5 to 3 directionality,
+       The convert_rna_5_3 function takes in a input mRNA strand that has a 5 to 3 directionality,
        and returns a complementary tRNA strand that has a 3 to 5 directionality. 
         
     Args:
@@ -396,7 +468,7 @@ def convert_rna(mRNA_template_strand):
             amino_acid_sequence.append('Trp')
         
         else: 
-            raise Exception('tRNA ')
+            raise Exception('tRNA Input Error: The inputted tRNA strand is unrecognizable, please restart the program.')
 
     else:
         formatted_amino_acid_seq  = "-".join(amino_acid_sequence)

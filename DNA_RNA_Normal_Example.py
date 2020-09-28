@@ -2,31 +2,21 @@ import nucleicfunctions as nf
 
 #--------------------------------------------------------------------------------------------------------
 
-# This is a basic use of the functions in the converterFunctions script. The 
-# nucleic acid strands are assigned to variables that specify the type of nucleic acid.
-# Lastly, the program passes the variables to the functions of the converterFunctins script, and
-# prints out the results: the complementary strand of the specified nucleic acid, the base-pairing
-# representation, and the amino acid sequence if the variable that was passed was the variable assigned
-# an mRNA strand. 
+# This is a basic use of the functions in the converterFunctions script.
+# The convert_dna_5_3 function will copy the outputted mRNA strand to the clipboard, 
+# and can be inputted into the convert_rna function. This process can also be done with
+# the convert_dna_5_3 function
 
 #--------------------------------------------------------------------------------------------------------
 
-#DNA strand 5-3 directionality
-first_dna_strand_example_5_3 = 'ACTGATCATCGATCGATGCATGCTACGTAGCTAGCTAGCGATCGTCGTAGCTAGCTAGCTAGC'
+#Assuming that you know the directionality, the DNA strand example will have a 5-3 directionality
 
-#DNA strand 3-5 directionality
-second_dna_strand_example_3_5 = 'CGCGATGCTAGCTAGCTAGCTAGCTAGCTAGCTGACTGATCGTACGTAGCTAGCTACTGACTG'
+dna_strand = 'ACTGATCATCGATCGATGCATGCTACGTAGCTAGCTAGCGATCGTCGTAGCTAGCTAGCTAGC'
 
-#mRNA strand 
-mRNA_strand_example = 'GACCUCGUCCGGGAUGAAACGUCUCAAUGAGGAAGGUGGACAUAUGCU'
+print(nf.convert_dna_5_3(dna_strand))
 
+x = input('\n\nEnter a mRNA strand: ')
 
-print(nf.convert_dna_5_3(first_dna_strand_example_5_3))
-
-print(nf.convert_dna_3_5(second_dna_strand_example_3_5))
-
-print(nf.convert_rna(mRNA_strand_example))
-
-
+print(nf.convert_rna(x))
 
 #-------END OF CODE---------------------- END OF CODE--------------------------END OF CODE-------------------------
