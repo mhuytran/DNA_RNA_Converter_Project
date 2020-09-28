@@ -36,4 +36,4 @@ elif (check_strand == "5-3" and strand == 'mrna'):
 else:
     raise Exception("Please re-run code, you either not enter the correct syntax or input the nucleic acid and directionality")
 
-#-------END OF CODE---------------------- END OF CODE--------------------------END OF CODE-------------------------
+#-------END OF CODE---------------------- END OF CODE---------------------------END OF CODE-------------------------
