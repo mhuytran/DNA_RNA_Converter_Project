@@ -1,4 +1,4 @@
-# DNA & mRNA Converter Project
+# Nucleic Acids Project
  
 **Before reading the README.md document, please view these resources if you do not remember base-pairing.**
 
